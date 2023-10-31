@@ -1,12 +1,56 @@
 .App {
   text-align: center;
 }
+body{
+      font-family: 'Josefin Sans', sans-serif;
+}
+img{
+  height: 250px;
+}
+body {
+  background: linear-gradient(90deg, #ecf1f6, #e9f5f8, #d9f0f4, #caf1f7);
 
+}
+
+
+.studentProfile{
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin-top: -75px;
+  position: relative;
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  border: 5px solid #f9f3f3; 
+}
+
+.studentCard{
+  border-radius: 5%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+}
+.a{
+    margin: 0;
+  padding: 0;
+  background-image:url("https://img.freepik.com/premium-vector/flat-illustration-design-cybersecurity_9206-2585.jpg?size=626&ext=jpg&ga=GA1.2.1311701072.1691690137&semt=sph");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+.inputs{
+  border: 2px solid black;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+:link{
+  text-decoration: none;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
