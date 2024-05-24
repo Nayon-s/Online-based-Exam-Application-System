@@ -39,7 +39,7 @@ const Home = () => {
         <div className="card" style={{width: "18 rem"}}>
   <img src="https://img.freepik.com/free-vector/college-class-concept-illustration_114360-10544.jpg?size=626&ext=jpg&ga=GA1.2.1311701072.1691690137&semt=sph" className="card-img-top" alt="..."/>
   <div className="card-body">
-        <h3 className="card-title my-3">07 Exams Ongoing</h3>
+        <h3 className="card-title my-3">Exam Information</h3>
 
         <Link className="btn btn-dark " aria-current="page" to="/admin/examdetails">View More Info</Link>
   </div>

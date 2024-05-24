@@ -57,7 +57,7 @@ const Login = (props) => {
 
   })
   const json= await response.json()
-  console.log(json.status)
+  console.log(json.status) 
   if(json.status==="Success"){
     setStudentDetails(json.student)
   const emailBody = `Your OTP: ${code}`;

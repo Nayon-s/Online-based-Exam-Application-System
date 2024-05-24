@@ -1,0 +1,375 @@
+[{
+  "_id": {
+    "$oid": "654d279776382e473e8d90f1"
+  },
+  "department": "IIT",
+  "year": "1st",
+  "semester": "1st",
+  "courseList": [
+    {
+      "courseTitle": "Introduction to ICT",
+      "courseCode": "ICT-1101",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Structured Programming Language",
+      "courseCode": "ICT-1103",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Electrical Circuits",
+      "courseCode": "ICT-1105",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Physics",
+      "courseCode": "ICT-1107",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Differential & Integral Calculus",
+      "courseCode": "ICT-1109",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Communicative English",
+      "courseCode": "ICT-1111",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Structured Programming Language Lab",
+      "courseCode": "ICT-1104",
+      "courseCredit": "1.5"
+    },
+    {
+      "courseTitle": "Electrical Circuits Lab",
+      "courseCode": "ICT-1106",
+      "courseCredit": "1.5"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "654d279876382e473e8d90f2"
+  },
+  "department": "IIT",
+  "year": "1st",
+  "semester": "2nd",
+  "courseList": [
+    {
+      "courseTitle": "Electronic Devices and Circuits",
+      "courseCode": "ICT-1201",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Object Oriented Programming",
+      "courseCode": "ICT-1203",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Linear Algebra & Analytical Geometry",
+      "courseCode": "ICT-1205",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Discrete Mathematics",
+      "courseCode": "ICT-1207",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Bangladesh Studies",
+      "courseCode": "ICT-1209",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Electronic Devices Lab",
+      "courseCode": "ICT-1202",
+      "courseCredit": "1.5"
+    },
+    {
+      "courseTitle": "Object Oriented Programming Lab",
+      "courseCode": "ICT-1204",
+      "courseCredit": "1.5"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "654d279876382e473e8d90f3"
+  },
+  "department": "IIT",
+  "year": "2nd",
+  "semester": "1st",
+  "courseList": [
+    {
+      "courseTitle": "Data Structures",
+      "courseCode": "ICT-2101",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Digital Logic Design",
+      "courseCode": "ICT-2103",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Numerical Analysis",
+      "courseCode": "ICT-2105",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Probability and Statistics for Engineers",
+      "courseCode": "ICT-2107",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Data & Telecommunication",
+      "courseCode": "ICT-2109",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Data Structures Lab",
+      "courseCode": "ICT-2102",
+      "courseCredit": "1.5"
+    },
+    {
+      "courseTitle": "Digital Logic Design Lab",
+      "courseCode": "ICT-2104",
+      "courseCredit": "1.5"
+    },
+    {
+      "courseTitle": "Numerical Analysis Lab",
+      "courseCode": "ICT-2106",
+      "courseCredit": "1.5"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "654d279876382e473e8d90f4"
+  },
+  "department": "IIT",
+  "year": "2nd",
+  "semester": "2nd",
+  "courseList": [
+    {
+      "courseTitle": "Algorithm Analysis & Design",
+      "courseCode": "ICT-2201",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Database Management System",
+      "courseCode": "ICT-2203",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Internet & Web Technology",
+      "courseCode": "ICT-2205",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Computer Architecture",
+      "courseCode": "ICT-2207",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Financial & Managerial Accounting",
+      "courseCode": "ICT-2209",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Algorithm Analysis & Design Lab",
+      "courseCode": "ICT-2202",
+      "courseCredit": "1.5"
+    },
+    {
+      "courseTitle": "Database Management Sysetm Lab",
+      "courseCode": "ICT-2204",
+      "courseCredit": "1.5"
+    },
+    {
+      "courseTitle": "Internet & Web Technology Lab",
+      "courseCode": "ICT-2206",
+      "courseCredit": "1.5"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "654d279876382e473e8d90f5"
+  },
+  "department": "IIT",
+  "year": "3rd",
+  "semester": "1st",
+  "courseList": [
+    {
+      "courseTitle": "Operating System",
+      "courseCode": "ICT-3101",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Computer Networks",
+      "courseCode": "ICT-3103",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Theory of Computation",
+      "courseCode": "ICT-3105",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Fourier Analysis & Laplace Transforms",
+      "courseCode": "ICT-3107",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Principles of Economics",
+      "courseCode": "ICT-3109",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Operating System Lab",
+      "courseCode": "ICT-3102",
+      "courseCredit": "1.5"
+    },
+    {
+      "courseTitle": "Computer Networks Lab",
+      "courseCode": "ICT-3104",
+      "courseCredit": "1.5"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "654d279876382e473e8d90f6"
+  },
+  "department": "IIT",
+  "year": "3rd",
+  "semester": "2nd",
+  "courseList": [
+    {
+      "courseTitle": "Software Engineering",
+      "courseCode": "ICT-3201",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Microprocessor & Interfacing",
+      "courseCode": "ICT-3203",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Signals & Systems",
+      "courseCode": "ICT-3205",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "E-commerce and E-governance",
+      "courseCode": "ICT-3207",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Simulation & Modeling",
+      "courseCode": "ICT-3209",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Software Engineering Lab",
+      "courseCode": "ICT-3202",
+      "courseCredit": "1.5"
+    },
+    {
+      "courseTitle": "Microprocessor & Interfacing Lab",
+      "courseCode": "ICT-3204",
+      "courseCredit": "1.5"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "654d279876382e473e8d90f7"
+  },
+  "department": "IIT",
+  "year": "4th",
+  "semester": "1st",
+  "courseList": [
+    {
+      "courseTitle": "Artificial Intelligence",
+      "courseCode": "ICT-4101",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Digital Signal Processing",
+      "courseCode": "ICT-4103",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Parallel & Distributed Systems",
+      "courseCode": "ICT-4105",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Wireless Networks",
+      "courseCode": "ICT-4107",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Human Computer Interaction",
+      "courseCode": "ICT-4109",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Artifial Intelligence Lab",
+      "courseCode": "ICT-4102",
+      "courseCredit": "1.5"
+    },
+    {
+      "courseTitle": "Digital Signal Processing Lab",
+      "courseCode": "ICT-4104",
+      "courseCredit": "1.5"
+    },
+    {
+      "courseTitle": "Mobile Application Development Lab",
+      "courseCode": "ICT-4106",
+      "courseCredit": "1.5"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "654d279876382e473e8d90f8"
+  },
+  "department": "IIT",
+  "year": "4th",
+  "semester": "2nd",
+  "courseList": [
+    {
+      "courseTitle": "Digital Image Processing",
+      "courseCode": "ICT-4201",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Computer Graphics & Animation",
+      "courseCode": "ICT-4203",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "From Option 1",
+      "courseCode": "ICT-42xx",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "From Option 2",
+      "courseCode": "ICT-42xx",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Option 1/2",
+      "courseCode": "ICT-42xx",
+      "courseCredit": "3.0"
+    },
+    {
+      "courseTitle": "Digital Image Processing Lab",
+      "courseCode": "ICT-4202",
+      "courseCredit": "1.5"
+    }
+  ]
+}]

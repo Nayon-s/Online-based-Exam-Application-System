@@ -14,7 +14,7 @@ const Navbar = () => {
     </button>
     <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul className="navbar-nav">
-        <li className="nav-item">
+        <li className="nav-item"> 
           <Link className="nav-link active mx-2 fs-5" aria-current="page" to="/admin/home">Home</Link>
         </li>
         <li className="nav-item">

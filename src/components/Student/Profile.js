@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'; 
 import Navbar from './Navbar';
 import { useLocation } from 'react-router-dom';
 // import AdmitCard from './AdmitCard';
@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
+ 
 const Profile = () => {
   const location = useLocation();
   const [userInfo, setUserInfo] = useState(null);
@@ -18,10 +18,11 @@ const Profile = () => {
       department: "",
       batch: "",
       name: "",
-      classRoll: "",
+      classRoll: "", 
       registrationNo:"",
-      paymentStatus:""
+      paymentStatus:"" 
     });
+    const [allSelected, setAllSelected] = useState(false);
   const checkCourse = (courseId) => {
     const updatedStates = [...courseStates];
     updatedStates[courseId] = !updatedStates[courseId]; 
@@ -31,11 +32,16 @@ const Profile = () => {
   const totalCourses = courseStates.filter((isChecked) => isChecked).length;
 
   const allExams=async()=>{
-    const response= await fetch('http://localhost:5000/api/exam/examlists',{
-      method: 'get',
+    const response= await fetch('http://localhost:5000/api/exam/examlistStudent',{
+      method: 'post',
       headers:{
         'Content-Type': 'application/json',
-      }
+      },
+      body: JSON.stringify({
+        department: location.state.id.department,
+          batch: location.state.id.batch
+      })
+
           })
     const json=await response.json()
     // console.log(json)
@@ -47,12 +53,12 @@ const Profile = () => {
   useEffect(() => {
     if (location.state && location.state.id) {
       setUserInfo(location.state.id);
-      
+      console.log(location.state.id)
       localStorage.setItem('studentState', JSON.stringify({ id: location.state.id }));
-      setApplicant(
+      setApplicant( 
         {
           department: location.state.id.department,
-          batch: "49",
+          batch: location.state.id.batch,
           name: location.state.id.name,
           classRoll: location.state.id.classRoll,
           registrationNo:location.state.id.registrationNo,
@@ -70,6 +76,19 @@ const Profile = () => {
      
   }, [location.state]);
   
+  const toggleSelectAll = () => {
+    const updatedStates = examList.reduce((acc, index) => {
+      if (index.department === userInfo.department) {
+        index.courseList.forEach((course, courseId) => {
+          acc[courseId] = !allSelected;
+        });
+      }
+      return acc;
+    }, []);
+    setCourseStates(updatedStates);
+    setAllSelected(!allSelected);
+  };
+// console.log(userInfo)  
 const apply= async ()=>{
   // setApplicant(
   //   {
@@ -145,7 +164,7 @@ return (
   <img src="https://img.freepik.com/premium-vector/young-man-avatar-character-vector-illustration-design_24877-18514.jpg?w=2000" className='card-img-top img-fluid rounded-circle studentProfile' alt="" />
       <h5 className="card-title mt-3">{userInfo.name}</h5>
 
-  <div className="card-body">
+  <div className="card-body"> 
   
   <ul className="list-group list-group-flush">
     <li className="list-group-item bg-dark text-light">Department: {userInfo.department}</li> 
@@ -162,7 +181,7 @@ return (
         return(
           <div key={id}>
           {index.department===userInfo.department?
-          <>
+          <> 
 
           
            <div className="card studentCard mt-5 d-block m-auto text-center mb-5" style={{width: "22rem"}}>
@@ -242,6 +261,8 @@ return (
   <input type="text" className="form-control"  value={userInfo.nationality}id="exampleFormControlInput1" />
 </div>
  <label htmlFor="exampleFormControlInput1"   className="form-label">Course List</label>
+ 
+
 
              {examList.map((index,id)=>{
               return(
@@ -274,7 +295,11 @@ return (
 
                 </div> ): ""
               )
-            })}  
+            })}    
+            <input type="checkbox" className="form-check-input"
+                    style={{ border: "1px solid black" ,marginLeft: "8px"}}  onClick={toggleSelectAll}/>                                  {allSelected ? 'Deselect All' : 'Select All'}
+  
+          
                   <table className="table table-sm mt-3 table-responsive-sm text-center fw-semibold" style={{ border: "2px solid" }}>
               <thead>
                 <tr className="bg-light">

@@ -15,7 +15,9 @@ const applicants = require('./models/applicants.js')
 const store_id = 'heybu64d3e43c0fdd4'
 const store_passwd = 'heybu64d3e43c0fdd4@ssl'
 const is_live = false 
+const fs = require('fs');
 const PDFDocument = require('pdfkit');
+const path = require('path'); 
 
 app.use('/api/auth', require('./routes/authenticate.js'))
 app.use('/api/exam', require('./routes/exams.js'))
@@ -102,30 +104,56 @@ sslcz.init(data).then(apiResponse => {
       if (!student) {
         return res.status(404).json({ message: 'Student not found' });
       }
-  
+   
       const PDFDocument = require('pdfkit');
       const doc = new PDFDocument(); 
   
       res.setHeader('Content-Type', 'application/pdf');
-      res.setHeader('Content-Disposition', `attachment; filename="admitCard.pdf"`);
+      res.setHeader('Content-Disposition', `attachment; filename="admitCard.pdf"`); 
   
       doc.pipe(res);
-  
-       doc.fontSize(20).text('Jahangirnagar University', {align:'center' });
-       doc.moveDown(0.8)
-       doc.fontSize(18).text('Admit Card', {align:'center'});
-       doc.moveDown(1)
-
-      doc.fontSize(12).text(`Name: ${student.name}`);
-      doc.moveDown(0.5)
+      const imagePath = path.join(__dirname, 'julogo.png'); 
       
-      doc.text(`Batch: ${student.batch}`);
+      if (!fs.existsSync(imagePath)) {
+        throw new Error(`Image file not found at path: ${imagePath}`);
+      }
+
+      // doc.image(imagePath, {
+      //   fit: [150, 150],
+      //   align: 'center'
+      // });
+      // doc.moveDown(1)
+
+      const pageWidth = doc.page.width;
+
+      const imageWidth = 150;
+      const imageHeight = 150;
+
+      const x = (pageWidth - imageWidth) / 2;
+      const y = 20; 
+      doc.image(imagePath, x, y, {
+        width: imageWidth,
+        height: imageHeight
+      });
+
+
+      doc.moveDown(9); 
+
+       doc.font('Helvetica-Bold').fontSize(20).text('Jahangirnagar University', {align:'center' });
+       doc.moveDown(0.8)
+       doc.font('Helvetica-Bold').fontSize(18).text('Admit Card', {align:'center'});
+       doc.moveDown(2)
+
+      doc.fontSize(14).text(`Name: ${student.name}`, {align:'center'});
+      doc.moveDown(0.5) 
+      
+      doc.fontSize(14).text(`Batch: ${student.batch}`,{align:'center'});
       doc.moveDown(0.5)
-      doc.text(`Department: ${student.department}`);
+      doc.fontSize(14).text(`Department: ${student.department}`, {align:'center'});
       doc.moveDown(0.5)
-      doc.text(`Exam Roll: 20${student.classRoll}`);
+      doc.fontSize(14).text(`Exam Roll: 20${student.classRoll}`, {align:'center'});
       doc.moveDown(0.5)
-      doc.text(`Registration No: ${student.registrationNo}`);
+      doc.fontSize(14).text(`Registration No: ${student.registrationNo}`, {align:'center'});
       doc.end();
    
     } catch (error) {
@@ -133,11 +161,11 @@ sslcz.init(data).then(apiResponse => {
       res.status(500).json({ error: 'Error generating PDF' });
     }
   
-
+    
 
    
 
-  })
+  }) 
 
   
   
