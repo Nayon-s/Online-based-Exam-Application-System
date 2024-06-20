@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import {
-    Link
+import { 
+    Link 
   } from "react-router-dom";
   
   
@@ -97,12 +97,15 @@ if (otp === code) {
 
     <div className='background'>
 
-
-<div className=" container d-flex justify-content-center align-items-center" style={{height: "100vh"}}>
-      <div className="card shadow-lg" style={{width: "22rem", backgroundColor:"#F5F5F5", border:""}}>
+<div className="container text-center mt-5 fs-2 text fw-semibold">
+          <i class="fas fa-graduation-cap"></i>Welcome to OBEAS
+          <i class="fas fa-university"></i>{" "}
+        </div>
+<div className=" container d-flex justify-content-center align-items-center" style={{height: "70vh"}}>
+      <div className="card shadow-lg animate__animated animate__fadeInDown" style={{width: "22rem", backgroundColor:"#F5F5F5", border:""}}>
 
       <div className=" card-body">
-      <h3 className="card-title text-center mt-3 mb-3">Admin Login</h3>
+      <h3 className="card-title text-center mt-3 mb-3">Teacher Login</h3>
       {!showOTPInput&&( <> <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label fw-semibold">Email Address</label>
   <input type="email" required class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" onChange={emailCheck} />

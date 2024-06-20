@@ -80,3 +80,20 @@ body {
     transform: rotate(360deg);
   }
 }
+.text {
+  font-size: 5em;
+  letter-spacing: 10px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(25);
+  animation-duration: 5s;
+  animation-iteration-count: 5;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}    
