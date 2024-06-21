@@ -42,7 +42,7 @@ body {
   height: 100vh;
 }
 .inputs{
-  border: 2px solid black;
+  border: 1px solid black;
 }
 .App-logo {
   height: 40vmin;
@@ -97,3 +97,4 @@ body {
     width: 0;
   }
 }    
+

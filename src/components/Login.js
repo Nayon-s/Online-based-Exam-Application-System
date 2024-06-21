@@ -123,22 +123,25 @@ const Login = (props) => {
         <>
             <div className='background'>
             <div className="container text-center mt-5 fs-2 text fw-semibold">
-          <i class="fas fa-graduation-cap"></i>Welcome to OBEAS
+                <div className='d-none d-sm-block'>
+                    <i class="fas fa-graduation-cap"></i>Welcome to OBEAS
           <i class="fas fa-university"></i>{" "}
+                </div>
+          
         </div>
-                <div className="container d-flex justify-content-center align-items-center" style={{ height: "70vh" }}>
-                    <div className="card shadow-lg animate__animated animate__fadeInDown" style={{ width: "24rem", backgroundColor: "#F5F5F5", border: "" }}>
+                <div className="container  d-flex justify-content-center align-items-center" style={{ height: "70vh" }}>
+                    <div className="card inputs shadow-lg animate__animated animate__fadeInDown" style={{ width: "24rem", backgroundColor: "#F5F5F5", border: "" }}>
                         <div className="card-body">
                             <h3 className="card-title text-center mt-3 mb-3"> Student Login</h3>
                             {!showOTPInput && (
                                 <>
                                     <div className="mb-3">
                                         <label htmlFor="registrationNo" className="form-label fw-semibold">Registration No</label>
-                                        <input type="text" className="form-control" value={registrationNo} required id="registrationNo" placeholder="Registration no" onChange={handleChange} />
+                                        <input type="text" className="inputs form-control" value={registrationNo} required id="registrationNo" placeholder="Registration no" onChange={handleChange} />
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="email" className="form-label fw-semibold">Email Address</label>
-                                        <input type="email" value={email} className="form-control" id="email" required placeholder="name@example.com" onChange={handleChange} />
+                                        <input type="email" value={email} className="inputs form-control" id="email" required placeholder="name@example.com" onChange={handleChange} />
                                     </div>
                                     <button disabled={email === "" || registrationNo === ""} className="btn btn-dark" onClick={sendEmail}>Log In</button>
                                 </>

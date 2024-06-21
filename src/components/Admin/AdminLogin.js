@@ -46,7 +46,7 @@ emailjs.send('service_q5exv6q', 'template_n9lgn2t', {
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
-      draggable: true,
+      draggable: true, 
       progress: undefined,
       theme: "light",
       });
@@ -58,7 +58,7 @@ emailjs.send('service_q5exv6q', 'template_n9lgn2t', {
 });
 }
 else{
-  toast.error(' Invalid Admin Email!', {
+  toast.error(' Invalid Email!', {
     position: "top-center",
     autoClose: 5000,
     hideProgressBar: false,
@@ -98,17 +98,20 @@ if (otp === code) {
     <div className='background'>
 
 <div className="container text-center mt-5 fs-2 text fw-semibold">
-          <i class="fas fa-graduation-cap"></i>Welcome to OBEAS
+  <div className='d-none d-sm-block'>
+     <i class="fas fa-graduation-cap"></i>Welcome to OBEAS
           <i class="fas fa-university"></i>{" "}
+  </div>
+         
         </div>
 <div className=" container d-flex justify-content-center align-items-center" style={{height: "70vh"}}>
-      <div className="card shadow-lg animate__animated animate__fadeInDown" style={{width: "22rem", backgroundColor:"#F5F5F5", border:""}}>
+      <div className="card inputs shadow-lg animate__animated animate__fadeInDown" style={{width: "22rem", backgroundColor:"#F5F5F5", border:""}}>
 
       <div className=" card-body">
       <h3 className="card-title text-center mt-3 mb-3">Teacher Login</h3>
       {!showOTPInput&&( <> <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label fw-semibold">Email Address</label>
-  <input type="email" required class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" onChange={emailCheck} />
+  <input type="email" required class="form-control inputs" id="exampleFormControlInput1" placeholder="name@example.com" onChange={emailCheck} />
 </div>
  <button className="btn btn-dark" disabled={email===""} onClick={sendEmail}>Log In
       </button></>)}
