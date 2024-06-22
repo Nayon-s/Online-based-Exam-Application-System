@@ -46,7 +46,18 @@ const Login = (props) => {
     };
 
     const sendEmail = async (e) => {
+        
         e.preventDefault();
+        toast.error('Student Not Found!', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
         const response = await fetch('http://localhost:5000/api/auth/login', {
             method: 'POST',
             headers: {
